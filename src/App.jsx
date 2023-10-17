@@ -1,11 +1,21 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from '../src/pages/Home'
+import SignIn from '../src/pages/SignIn'
+import SignOut from '../src/pages/SignOut'
+import Profile from '../src/pages/Profile'
+import About from '../src/pages/About'
 function App() {
   return (
-    <>
-      <div className='bg-slate-700 w-6 h-5'>
-        Hello
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignOut />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/about" element={<About />} />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
